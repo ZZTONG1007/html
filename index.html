@@ -1,51 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>呀喽呀喽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐 · 猫咪祝福</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            
+            background-image: url("miao.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: 'Microsoft YaHei', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 240, 230, 0.5);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 30px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cake {
+            font-size: 80px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            color: #c46b4f;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+        }
+        
+        .to {
+            font-size: 24px;
+            color: #e18d6f;
+            background: rgba(255, 240, 230, 0.9);
+            display: inline-block;
+            padding: 8px 30px;
+            border-radius: 50px;
+            margin: 15px 0;
+            border: 1px solid #ffba9a;
+        }
+        
+        .wish {
+            font-size: 22px;
+            color: #9f6e5a;
+            line-height: 1.6;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 249, 244, 0.9);
+            border-radius: 20px;
+            border: 1px dashed #ffba9a;
+        }
+        
+        .wish p {
+            margin: 10px 0;
+        }
+        
+        .footer {
+            font-size: 18px;
+            color: #b28774;
+            margin-top: 20px;
+            border-top: 2px solid #ffe1d0;
+            padding-top: 20px;
+        }
+        
+        .hearts {
+            color: #ff8a9c;
+            font-size: 24px;
+            letter-spacing: 8px;
+            margin: 10px 0;
+        }
+        
+        .balloons {
+            font-size: 35px;
+            margin: 15px 0 5px;
+        }
+
+        /* 猫咪小装饰 */
+        .cat-icon {
+            font-size: 40px;
+            margin-bottom: 5px;
+            animation: catWave 3s infinite;
+        }
+
+        @keyframes catWave {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        
+        .music-control {
+            margin: 20px auto 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .music-btn {
+            background: #ffaa88;
+            border: none;
+            color: #49281a;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #ffdbbc;
+            box-shadow: 0 3px 0 #b15f3f;
+            transition: all 0.05s linear;
+            backdrop-filter: blur(4px);
+        }
+        
+        .music-btn:active {
+            transform: translateY(3px);
+            box-shadow: 0 0 0 #b15f3f;
+        }
+        
+        .music-note {
+            font-size: 20px;
+            color: #b28774;
+            animation: gentleWave 2s infinite;
+        }
+
+        @keyframes gentleWave {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            75% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .hint {
+            font-size: 13px;
+            color: #d9b2a0;
+            margin-top: 8px;
+        }
+    </style>
 </head>
 <body>
-<div style="
-                background-color: aqua;
-                text-align: center;
-                padding: 10px">
-    <img src="https://funshiki33989-cloudflare-imgbed.pages.dev/file/1772020474755_4caa5caa6f11b19f2383f33527b6b688319140216.png"
-         alt="辉夜姬" width="400px" height="300px"/>
-</div>
-<div style="background-color: #a40fdb;
-max-width: 760px;
-line-height: 1.7;
-margin: 30px auto;
-padding: 15px;
-text-align: center">
-    <p style="color: chartreuse">超</p>
-    <p style="color: blue">时</p>
-    <p style="color: crimson">空</p>
-    <p style="color: blueviolet">辉</p>
-    <p style="color: cyan">夜</p>
-    <p style="color: dodgerblue">姬</p>
-</div>
-<div style="
-                background-color: aqua;
-                text-align: center;
-                padding: 40px;
-font-size: 12px">
-    <audio autoplay = "autoplay";
-        loop = "loop";
-        preload = "auto";
+    <!-- 音频元素：英文生日快乐歌 -->
+    <audio id="birthdaySong" loop preload="auto">
         
-        
-        src = "生日快乐歌.mp3"></audio>
-    <object height="50" width="100" data="生日快乐歌.mp3"></object>
-    <embed height="50" width="100" src="生日快乐歌.mp3">
-    <p>跳转到哔哩哔哩</p>
-    <a href="https://www.bilibili.com/">友情链接 </a>
-</div>
+        <source src="XH.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
 
+    <div class="card">
+        <!-- 猫咪装饰 -->
+        <div class="cat-icon">
+            🐱 🐈 🐱
+        </div>
+        
+        <div class="balloons">
+            🎈 🎈 🎈
+        </div>
+        
+        <div class="cake">
+            🎂
+        </div>
+        
+        <h1>祝富哥生日快乐!!!!</h1>
+        
+        <div class="to">
+            Happy birthday!
+        </div>
+        
+        <div class="wish">
+            <p>✨ 愿你每天开心 ✨</p>
+            <p>🎁 得到心念之人 🎁</p>
+            <p>💝 幸福永远围绕 💝</p>
+        </div>
+        
+        <!-- 猫咪脚印装饰 -->
+        <div style="font-size: 20px; color: #c46b4f; margin: 10px 0;">
+            🐾 🐾 🐾
+        </div>
+        
+        <div class="hearts">
+            ❤️ ❤️ ❤️
+        </div>
+        
+        <!-- 音乐控制按钮 -->
+        <div class="music-control">
+            <button class="music-btn" id="playBtn">🔊 播放</button>
+            <button class="music-btn" id="pauseBtn">🔇 暂停</button>
+        </div>
+        <div class="music-note" id="musicStatus">🎵 点击播放</div>
+        
+        <div class="footer">
+            
+            <div style="font-size: 14px; margin-top: 10px; color: #d9b2a0;">2026 · 3 · 31生日快乐</div>
+        </div>
+        
+        <div class="hint">
+            🐱  生日快乐 🐱
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const audio = document.getElementById('birthdaySong');
+            const playBtn = document.getElementById('playBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            const musicStatus = document.getElementById('musicStatus');
+            
+            
+            audio.volume = 0.5;
+            
+            
+            playBtn.addEventListener('click', function() {
+                audio.play()
+                    .then(() => {
+                        musicStatus.innerHTML = '🎵 正在播放';
+                        musicStatus.style.color = '#c46b4f';
+                    })
+                    .catch(error => {
+                        console.log('播放失败:', error);
+                        musicStatus.innerHTML = '⚠️ 点击页面任意位置后重试';
+                    });
+            });
+            
+            
+            pauseBtn.addEventListener('click', function() {
+                audio.pause();
+                musicStatus.innerHTML = '🎵 音乐已暂停';
+                musicStatus.style.color = '#b28774';
+            });
+            
+            
+            audio.load();
+        })();
+    </script>
 </body>
 </html>
-
-
-
-
-
